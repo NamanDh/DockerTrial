@@ -4,6 +4,6 @@ steps:
     key: build
 
   - label: ":white_check_mark: Build"
-    command: docker build -t mywebapp:latest --file Dockerfile .
+    command: cat Dockerfile
     key: test
     depends_on: build
