@@ -1,0 +1,9 @@
+steps:
+  - label: ":construction_worker: Echo"
+    command: echo "Build the rocket"
+    key: build
+
+  - label: ":white_check_mark: Build"
+    command: docker build -t mywebapp:latest --file Dockerfile .
+    key: test
+    depends_on: build
