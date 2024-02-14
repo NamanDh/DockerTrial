@@ -4,6 +4,11 @@ steps:
     key: build
 
   - label: ":white_check_mark: Build"
-    command: cat Dockerfile
+    command: |
+    
+    cat Dockerfile
+    pwd
+    docker build .
+    
     key: test
     depends_on: build
