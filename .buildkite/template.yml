@@ -1,0 +1,7 @@
+name: "Docker build pipeline"
+description: "Example of docker build."
+emoji: ":rocket:"
+tags: ["DockerBuild"]
+steps:
+  - command: "buildkite-agent pipeline upload"
+    label: ":pipeline:"
