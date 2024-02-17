@@ -1,2 +1,2 @@
-FROM centos:latest
-RUN yum install net-tools -y
+FROM centos:7
+RUN mkdir /home/centos/newdir
