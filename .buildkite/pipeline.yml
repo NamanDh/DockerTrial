@@ -12,7 +12,6 @@ steps:
     depends_on: build
     
   - label: ":lock: Snyk Test"
-    command: |
-      docker run --rm -v $(pwd):/app -w /app snyk/snyk-cli test
+    command: snyk test
     key: snyk-test
     depends_on: test
