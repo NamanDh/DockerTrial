@@ -7,11 +7,11 @@ steps:
     command: |
       cat Dockerfile
       pwd
-      docker build .
+      docker build -t myimage:latest .
     key: test
     depends_on: build
     
   - label: ":lock: Snyk Test"
-    command: snyk test
+    command: snyk test --docker myimage:latest
     key: snyk-test
     depends_on: test
